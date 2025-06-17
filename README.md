@@ -28,7 +28,7 @@ A modern, responsive portfolio website built with Next.js, Framer Motion, and Th
 - **Animations**: Framer Motion
 - **3D Graphics**: Three.js
 - **Icons**: React Icons
-- **Form Handling**: EmailJS
+- **Form Handling**: Formspree
 - **Other**: React Simple Typewriter
 
 ## Getting Started
@@ -99,7 +99,11 @@ Update the color scheme by editing the CSS variables in `/styles/globals.css`.
 
 ### Email Setup
 
-To set up the contact form, update the EmailJS configuration in `/components/sections/Contact.js` with your own service ID, template ID, and user ID from [EmailJS](https://www.emailjs.com/).
+To set up the contact form, update the Formspree form endpoint in `/components/sections/Contact.js` with your own form ID from [Formspree](https://formspree.io/).
+
+1. Create a free account at [Formspree](https://formspree.io/)
+2. Create a new form and get your form ID (it looks like `xgeryabz`)
+3. Replace the placeholder form ID in the `action` attribute of the form in `/components/sections/Contact.js`
 
 ## License
 
@@ -110,4 +114,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Next.js team for the amazing framework
 - Framer Motion for the smooth animations
 - Three.js for the 3D capabilities
+- Formspree for the simple and effective form handling
 - All the incredible open-source contributors

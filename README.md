@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Portfolio Website
+
+A modern, responsive portfolio website built with Next.js, Framer Motion, and Three.js. This portfolio includes smooth scroll animations, 3D elements, and a clean, professional design.
+
+## Features
+
+- **Fully Responsive**: Looks great on all devices from mobile to desktop
+- **Smooth Animations**: Using Framer Motion for scroll-based animations
+- **3D Elements**: Three.js integration with interactive 3D objects
+- **Dark/Light Mode**: Toggle between dark and light themes
+- **Accessible Design**: WCAG-friendly contrast and keyboard navigation
+- **Modern UI**: Clean, minimalist design with micro-interactions
+- **Contact Form**: Fully functional contact form with email integration
+- **Performance Optimized**: Fast loading times and optimized assets
+
+## Sections
+
+1. **Hero**: Introduction with animated typewriter effect and 3D element
+2. **About Me**: Personal information, skills, and competencies
+3. **Projects**: Showcase of projects with filter functionality and card flip animations
+4. **Experience**: Timeline of professional experience
+5. **Contact**: Contact form with validation and Google Maps integration
+
+## Tech Stack
+
+- **Framework**: Next.js
+- **Styling**: CSS Modules
+- **Animations**: Framer Motion
+- **3D Graphics**: Three.js
+- **Icons**: React Icons
+- **Form Handling**: EmailJS
+- **Other**: React Simple Typewriter
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 14.x or higher
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```
+   git clone https://github.com/yourusername/portfolio.git
+   ```
+
+2. Navigate to the project directory:
+   ```
+   cd portfolio
+   ```
+
+3. Install dependencies:
+   ```
+   npm install
+   ```
+
+4. Run the development server:
+   ```
+   npm run dev
+   ```
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+### Production Build
+
+To create a production build:
+
+```
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To start the production server:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+npm start
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Customization
 
-## Learn More
+### Personal Information
 
-To learn more about Next.js, take a look at the following resources:
+Edit your personal information in the respective component files:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Update your name, role, and description in `/components/sections/Hero.js`
+- Update your bio in `/components/sections/About.js`
+- Update your projects in `/components/sections/Projects.js`
+- Update your experience in `/components/sections/Experience.js`
+- Update your contact information in `/components/sections/Contact.js`
+- Update your social links in `/components/layout/Footer.js`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Images
 
-## Deploy on Vercel
+Replace the placeholder images in the `/public/images/` directory with your own images.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Colors
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Update the color scheme by editing the CSS variables in `/styles/globals.css`.
+
+### Email Setup
+
+To set up the contact form, update the EmailJS configuration in `/components/sections/Contact.js` with your own service ID, template ID, and user ID from [EmailJS](https://www.emailjs.com/).
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## Acknowledgments
+
+- Next.js team for the amazing framework
+- Framer Motion for the smooth animations
+- Three.js for the 3D capabilities
+- All the incredible open-source contributors

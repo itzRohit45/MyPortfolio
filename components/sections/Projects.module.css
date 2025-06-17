@@ -1,0 +1,91 @@
+.projects {
+  padding: 100px 0;
+  background-color: rgba(72, 49, 212, 0.02);
+}
+
+:global(.dark-mode) .projects {
+  background-color: rgba(15, 23, 42, 0.3);
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterButton {
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+:global(.dark-mode) .filterButton {
+  border-color: var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.filterButton:hover {
+  background: rgba(72, 49, 212, 0.1);
+}
+
+:global(.dark-mode) .filterButton:hover {
+  background: rgba(60, 229, 252, 0.1);
+}
+
+.filterButton.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+:global(.dark-mode) .filterButton.active {
+  background: var(--secondary-color);
+  color: var(--bg-dark);
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.projectItem {
+  height: 100%;
+  min-height: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .projectGrid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projectGrid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .filters {
+    gap: 0.75rem;
+  }
+  
+  .filterButton {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projectGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}

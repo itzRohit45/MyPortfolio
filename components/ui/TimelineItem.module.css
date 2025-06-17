@@ -1,0 +1,142 @@
+.timelineItem {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.content {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+:global(.dark-mode) .content {
+  background-color: rgba(31, 41, 55, 0.8);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+}
+
+:global(.dark-mode) .content:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Date badge */
+.date {
+  position: absolute;
+  top: -12px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  box-shadow: 0 3px 8px rgba(72, 49, 212, 0.2);
+}
+
+.title {
+  font-size: 1.2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.company {
+  font-size: 1rem;
+  opacity: 0.8;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+  background: rgba(72, 49, 212, 0.1);
+  color: var(--primary-color);
+}
+
+:global(.dark-mode) .skill {
+  background: rgba(60, 229, 252, 0.1);
+  color: var(--secondary-color);
+}
+
+/* Timeline design for larger screens */
+@media screen and (min-width: 768px) {
+  .timelineItem {
+    width: 50%;
+  }
+
+  .timelineItem::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    top: 20px;
+    z-index: 1;
+  }
+
+  .timelineItem::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+    top: 30px;
+    z-index: 0;
+  }
+
+  .left {
+    padding-right: 2.5rem;
+  }
+
+  .left::before {
+    right: -10px;
+  }
+  
+  .left::after {
+    right: -1px;
+  }
+
+  .right {
+    left: 50%;
+    padding-left: 2.5rem;
+  }
+
+  .right::before {
+    left: -10px;
+  }
+  
+  .right::after {
+    left: -1px;
+  }
+  
+  /* Position the date badge differently for left/right items */
+  .left .date {
+    right: 20px;
+  }
+
+  .right .date {
+    left: 20px;
+  }
+}

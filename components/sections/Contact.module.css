@@ -1,0 +1,221 @@
+.contact {
+  padding: 100px 0;
+  background-color: rgba(72, 49, 212, 0.02);
+}
+
+:global(.dark-mode) .contact {
+  background-color: rgba(15, 23, 42, 0.3);
+}
+
+.contactWrapper {
+  display: flex;
+  gap: 3rem;
+  margin: 3rem 0;
+}
+
+.contactInfo,
+.contactForm {
+  flex: 1;
+}
+
+.contactInfo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.contactInfo h3::after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  bottom: -10px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.contactInfo p {
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+.infoItems {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.infoIcon {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  background: rgba(72, 49, 212, 0.1);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+:global(.dark-mode) .infoIcon {
+  color: var(--secondary-color);
+  background: rgba(60, 229, 252, 0.1);
+}
+
+.infoContent h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.infoContent p,
+.infoContent a {
+  opacity: 0.8;
+}
+
+.infoContent a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.infoContent a:hover {
+  color: var(--primary-color);
+}
+
+:global(.dark-mode) .infoContent a:hover {
+  color: var(--secondary-color);
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: white;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+:global(.dark-mode) .formGroup input,
+:global(.dark-mode) .formGroup textarea {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(15, 22, 36, 0.7);
+  color: var(--text-light);
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(72, 49, 212, 0.2);
+}
+
+:global(.dark-mode) .formGroup input:focus,
+:global(.dark-mode) .formGroup textarea:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 2px rgba(60, 229, 252, 0.2);
+}
+
+.submitButton {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(72, 49, 212, 0.3);
+}
+
+.submitButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(72, 49, 212, 0.4);
+}
+
+.submitButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.formMessage {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success-color);
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.error {
+  background-color: rgba(255, 77, 77, 0.1);
+  color: var(--danger-color);
+  border: 1px solid rgba(255, 77, 77, 0.3);
+}
+
+.mapWrapper {
+  margin-top: 4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+:global(.dark-mode) .mapWrapper {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+@media screen and (max-width: 992px) {
+  .contactWrapper {
+    flex-direction: column;
+  }
+  
+  .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .mapWrapper {
+    margin-top: 3rem;
+  }
+  
+  .mapWrapper iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contactInfo h3 {
+    font-size: 1.5rem;
+  }
+  
+  .infoIcon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
+  }
+  
+  .submitButton {
+    width: 100%;
+  }
+}

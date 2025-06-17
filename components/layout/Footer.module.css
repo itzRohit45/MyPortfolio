@@ -1,0 +1,143 @@
+.footer {
+  background: linear-gradient(to right, rgba(72, 49, 212, 0.05), rgba(60, 229, 252, 0.05));
+  padding: 2rem 0;
+  position: relative;
+}
+
+:global(.dark-mode) .footer {
+  background: linear-gradient(to right, rgba(72, 49, 212, 0.1), rgba(60, 229, 252, 0.1));
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.simpleFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.footerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.name {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+  margin: 0;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quickLinks li a {
+  transition: color 0.3s ease;
+}
+
+.quickLinks li a:hover {
+  color: var(--primary-color);
+}
+
+:global(.dark-mode) .quickLinks li a:hover {
+  color: var(--secondary-color);
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+:global(.dark-mode) .bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialIcons li a {
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(72, 49, 212, 0.1);
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.socialIcons li a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(72, 49, 212, 0.3);
+}
+
+:global(.dark-mode) .socialIcons li a {
+  background-color: rgba(60, 229, 252, 0.1);
+  color: var(--secondary-color);
+}
+
+:global(.dark-mode) .socialIcons li a:hover {
+  background-color: var(--secondary-color);
+  color: var(--bg-dark);
+  box-shadow: 0 5px 15px rgba(60, 229, 252, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .top {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+}
